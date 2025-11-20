@@ -1,4 +1,5 @@
 package com.project.entity;
+import java.util.*;
 
 public class Wallet {
     private String color;
