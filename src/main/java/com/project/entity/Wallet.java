@@ -11,15 +11,35 @@ public class Wallet {
         this.myBalance = myBalance;
     }
 
+    public String getColor() {
+        return color;
+    }
+
     public Double getSize() {
         return size;
     }
 
-    public Double getMyBalance() {
+    public Double getVola(Double retrieveAmount) {
+        return myBalance - retrieveAmount;
+    }
+
+    public Double addVola(Double addAmount) {
+        return myBalance + addAmount;
+    }
+
+    public Double open() {
         return myBalance;
     }
 
-    public String getColor() {
-        return color;
+    public String close() {
+        return "It's closed";
+    }
+
+    public Boolean isLost(WalletStatus walletStatus) {
+        return walletStatus != WalletStatus.WITH_ME;
+    }
+
+    public Double checkVola() {
+        return myBalance;
     }
 }
