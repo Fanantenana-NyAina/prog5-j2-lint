@@ -4,7 +4,7 @@ public class Wallet {
     private String color;
     private Size size;
     private Double myBalance;
-    private String tenyGasy;
+    //private String tenyGasy;
     //private String ErrorVar;
     //private String error_var;
 
