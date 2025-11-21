@@ -1,10 +1,10 @@
 package com.project.entity;
-import java.util.*;
 
 public class Wallet {
     private String color;
     private Double size;
     private Double myBalance;
+    private int Error;
 
     public Wallet(String color, Double size, Double myBalance) {
         this.color = color;
@@ -20,12 +20,14 @@ public class Wallet {
         return size;
     }
 
-    public Double getVola(Double retrieveAmount) {
-        return myBalance - retrieveAmount;
+    public Double addVola(Double deposit) {
+        var depositAmount = deposit + myBalance;
+        return depositAmount;
     }
 
-    public Double addVola(Double addAmount) {
-        return myBalance + addAmount;
+    public Double getVola(Double withdraw) {
+        var WithdrawAmout = withdraw - myBalance;
+        return WithdrawAmout;
     }
 
     public Double open() {
@@ -36,8 +38,9 @@ public class Wallet {
         return "It's closed";
     }
 
-    public Boolean isLost(WalletStatus walletStatus) {
-        return walletStatus != WalletStatus.WITH_ME;
+    public boolean isLost(WalletStatus walletStatus) {
+        boolean isLost = walletStatus != walletStatus.WITH_ME;
+        return isLost;
     }
 
     public Double checkVola() {
