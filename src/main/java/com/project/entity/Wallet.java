@@ -4,6 +4,9 @@ public class Wallet {
     private String color;
     private Size size;
     private Double myBalance;
+    private String tenyGasy;
+    private String ErrorVar;
+    private String error_var;
 
     public Wallet(String color, Size size, Double myBalance) {
         this.color = color;
