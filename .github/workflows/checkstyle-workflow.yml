@@ -1,0 +1,33 @@
+name: checkstyle-workflow.yml
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Compile, package, and run Checkstyle checks
+        run: mvn --batch-mode verify
+
+      - name: Upload Checkstyle Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: checkstyle-results
+          path: target/checkstyle-result.xml
+
