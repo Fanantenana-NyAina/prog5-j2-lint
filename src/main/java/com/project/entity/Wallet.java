@@ -2,11 +2,11 @@ package com.project.entity;
 
 public class Wallet {
     private String color;
-    private Double size;
+    private Size size;
     private Double myBalance;
     private int Error;
 
-    public Wallet(String color, Double size, Double myBalance) {
+    public Wallet(String color, Size size, Double myBalance) {
         this.color = color;
         this.size = size;
         this.myBalance = myBalance;
@@ -16,7 +16,7 @@ public class Wallet {
         return color;
     }
 
-    public Double getSize() {
+    public Size getSize() {
         return size;
     }
 
