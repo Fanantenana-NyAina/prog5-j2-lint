@@ -7,6 +7,6 @@
         <module name="LocalVariableName"/>
         <module name="MemberName"/>
         <module name="MethodName"/>
-        <module name="com.project.custom.checker.EnglishVaribaleNameChecker"/>
+        <module name="com.project.custom.checker.IfEnglishVarCheck"/>
     </module>
 </module>

@@ -4,7 +4,6 @@ public class Wallet {
     private String color;
     private Size size;
     private Double myBalance;
-    private int Error;
 
     public Wallet(String color, Size size, Double myBalance) {
         this.color = color;
@@ -26,8 +25,8 @@ public class Wallet {
     }
 
     public Double getVola(Double withdraw) {
-        var WithdrawAmout = withdraw - myBalance;
-        return WithdrawAmout;
+        var withdrawAmount = withdraw - myBalance;
+        return withdrawAmount;
     }
 
     public Double open() {
